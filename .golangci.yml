@@ -1,0 +1,70 @@
+---
+run:
+  timeout: 1m
+
+linters:
+  enable-all: true
+  disable:
+    - wrapcheck
+    - testpackage
+    - gochecknoglobals
+    - exhaustivestruct
+    - exhaustruct
+    - nonamedreturns
+    - paralleltest
+    - godox
+    - cyclop
+    - tagliatelle
+    - exhaustive
+    - goerr113
+    - errorlint
+    - varnamelen
+  fast: false
+
+# Settings for specific linters
+linters-settings:
+  funlen:
+    lines: 150
+    statements: 45
+
+issues:
+  exclude-rules:
+    - path: cmd/
+      linters:
+        - gochecknoinits
+        - gomnd
+        - forbidigo
+
+    - path: internal/http/
+      linters:
+        - unparam
+        - nlreturn
+
+    - path: _test\.go
+      linters:
+        - scopelint
+        - wsl
+        - nlreturn
+        - funlen
+        - dupl
+
+    - path: doc.go
+      linters:
+        - lll
+
+    - linters:
+        - lll
+      source: "json:"
+
+    - path: _test.go
+      linters:
+        - nosnakecase
+
+    - text: "O_WRONLY|O_RDWR|O_CREATE|O_TRUNC|O_APPEND"
+      linters:
+        - nosnakecase
+
+    - linters:
+        - gocritic
+        - godot
+      source: "//////"

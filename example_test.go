@@ -3,7 +3,7 @@ package lumberjack_test
 import (
 	"log"
 
-	"github.com/saucelabs/lumberjack/v3"
+	"github.com/thalesfsp/lumberjack/v3"
 )
 
 // To use lumberjack with the standard library's log package, just pass it into

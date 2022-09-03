@@ -3,10 +3,10 @@
 // Note that this is v3.0 of lumberjack, and should be imported using gopkg.in
 // thusly:
 //
-//	import "github.com/saucelabs/lumberjack/v3"
+//	import "github.com/thalesfsp/lumberjack/v3"
 //
 // The package name remains simply lumberjack, and the code resides at
-// https://github.com/saucelabs/lumberjack/v3 under the v3.0 branch.
+// https://github.com/thalesfsp/lumberjack/v3 under the v3.0 branch.
 //
 // Lumberjack is intended to be one part of a logging infrastructure.
 // It is not an all-in-one solution, but instead is a pluggable
